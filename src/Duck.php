@@ -13,6 +13,10 @@ abstract class Duck
   /** @var QuackBehavior */
   private quackBehavior;
 
+  /**
+   * @param FlyBehavior $flyBehavior
+   * @param QuackBehavior $quackBehavior
+   */
   public function __construct(FlyBehavior $flyBehavior, QuackBehavior $quackBehavior)
   {
     $this->flyBehavior = $flyBehavior;
@@ -22,21 +26,27 @@ abstract class Duck
   abstract public function display();
 
   /**
-   * @return Duck
+   * @return string 
    */
   public function fly()
   {
-    $this->flyBehavior->fly();
-    return $this;
+    return $this->flyBehavior->fly();
   }
 
   /**
-   * @return Duck
+   * @return string 
    */
   public function quack()
   {
-    $this->quackBehavior->quack();
-    return $this;
+    return $this->quackBehavior->quack();
+  }
+
+  /**
+   * @return string 
+   */
+  public function swim()
+  {
+    return "I'm swimming!";
   }
 
   /**
@@ -58,13 +68,5 @@ abstract class Duck
     $this->quackBehavior = $quackBehavior;
     return $this;
   }
-
-  /**
-   * @return Duck
-   */
-  public function swim()
-  {
-    print "I'm swimming!";
-    return $this;
-  }
 }
+
