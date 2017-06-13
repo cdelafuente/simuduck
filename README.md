@@ -1,7 +1,7 @@
 # Simuduck
 
-This is an example from O'Reilly's Head First Design Patterns book, that illustrates
-the *Strategy Pattern*. I rewrote the example in PHP and added unit tests.
+This is an example from [O'Reilly's Head First Design Patterns](http://shop.oreilly.com/product/9780596007126.do) book that illustrates
+the **Strategy Pattern**. I rewrote the example in PHP and added unit tests.
 
 ## Installation
 
