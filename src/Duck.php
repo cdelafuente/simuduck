@@ -2,8 +2,8 @@
 
 namespace Simuduck;
 
-use Simuduck\Behavior\FlyBehavior;
-use Simuduck\Behavior\QuackBehavior;
+use Simuduck\Behavior\Fly\FlyBehavior;
+use Simuduck\Behavior\Quack\QuackBehavior;
 
 abstract class Duck
 {
@@ -11,7 +11,7 @@ abstract class Duck
   private $flyBehavior;
 
   /** @var QuackBehavior */
-  private quackBehavior;
+  private $quackBehavior;
 
   /**
    * @param FlyBehavior $flyBehavior
@@ -46,7 +46,7 @@ abstract class Duck
    */
   public function swim()
   {
-    return "I'm swimming!";
+    return "I'm swimming";
   }
 
   /**
